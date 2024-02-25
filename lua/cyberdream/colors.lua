@@ -5,6 +5,7 @@ M.default = {
     bgAlt = "#1e2124",
     bgHighlight = "#3c4048",
     fg = "#ffffff",
+    darkGrey = "#232223",
     grey = "#7b8496",
     blue = "#5ea1ff",
     green = "#5eff6c",

@@ -11,36 +11,15 @@ function M.setup()
     -- Override colors with user defined colors
     t = vim.tbl_deep_extend("force", t, opts.theme.colors)
 
-    if opts.transparent then
-        t.bg = "NONE"
-    end
-
-    if opts.hide_fillchars then
-        vim.opt.fillchars:append({
-            horiz = " ",
-            horizup = " ",
-            horizdown = " ",
-            vert = " ",
-            vertleft = " ",
-            vertright = " ",
-            verthoriz = " ",
-            eob = " ",
-        })
-    else
-        vim.opt.fillchars:append({
-            eob = " ",
-        })
-    end
-
     theme.highlights = {
         Comment = { fg = t.grey, italic = opts.italic_comments },
-        ColorColumn = { bg = t.bg },
+        ColorColumn = { bg = t.bgHighlight },
         Conceal = { fg = t.grey },
         Cursor = { fg = t.bg, bg = t.fg },
         ICursor = { fg = t.bg, bg = t.fg },
         CursorIM = { fg = t.bg, bg = t.fg },
-        CursorColumn = { bg = t.bgHighlight },
-        CursorLine = { bg = t.bg },
+        CursorColumn = { bg = t.darkGrey },
+        CursorLine = { bg = t.darkGrey },
         Directory = { fg = t.blue },
         DiffAdd = { fg = t.green },
         DiffChange = { fg = t.cyan },
@@ -162,7 +141,7 @@ function M.setup()
         LspCodeLens = { fg = t.grey },
         LspInlayHint = { fg = t.grey },
 
-        LspInfoBorder = { fg = t.bg },
+        LspInfoBorder = { fg = t.grey },
 
         -- WhichKey
         WhichKey = { fg = t.cyan },
@@ -246,21 +225,6 @@ function M.setup()
         NoiceLspProgressSpinner = { fg = t.orange },
         NoiceLspProgressTitle = { fg = t.cyan },
     }
-
-    if opts.borderless_telescope then
-        theme.highlights.TelescopeBorder = { fg = t.bgAlt, bg = t.bgAlt }
-        theme.highlights.TelescopeNormal = { bg = t.bgAlt }
-        theme.highlights.TelescopePreviewBorder = { fg = t.bgAlt, bg = t.bgAlt }
-        theme.highlights.TelescopePreviewNormal = { bg = t.bgAlt }
-        theme.highlights.TelescopePreviewTitle = { fg = t.bgAlt, bg = t.green }
-        theme.highlights.TelescopePromptBorder = { fg = t.bgAlt, bg = t.bgAlt }
-        theme.highlights.TelescopePromptNormal = { fg = t.fg, bg = t.bgAlt }
-        theme.highlights.TelescopePromptPrefix = { fg = t.red, bg = t.bgAlt }
-        theme.highlights.TelescopePromptTitle = { fg = t.bgAlt, bg = t.red }
-        theme.highlights.TelescopeResultsBorder = { fg = t.bgAlt, bg = t.bgAlt }
-        theme.highlights.TelescopeResultsNormal = { bg = t.bgAlt }
-        theme.highlights.TelescopeResultsTitle = { fg = t.bgAlt, bg = t.bgAlt }
-    end
 
     -- Override highlights with user defined highlights
     theme.highlights = vim.tbl_deep_extend("force", theme.highlights, opts.theme.highlights or {})

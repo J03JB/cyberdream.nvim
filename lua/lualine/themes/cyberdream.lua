@@ -2,10 +2,6 @@ local colors = require("cyberdream.colors").default
 local opts = require("cyberdream.config").options
 local cyberdream = {}
 
-if opts.transparent then
-    colors.bg = "NONE"
-end
-
 cyberdream.normal = {
     a = { fg = colors.blue, bg = colors.bg },
     b = { fg = colors.cyan, bg = colors.bg },

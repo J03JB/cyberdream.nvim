@@ -2,10 +2,7 @@ local M = {}
 
 ---@class Config
 local default_options = {
-    transparent = false,
-    italic_comments = false,
-    hide_fillchars = false,
-    borderless_telescope = true,
+    italic_comments = true,
 
     theme = {
         colors = {},

@@ -54,10 +54,7 @@ Lazy:
     config = function()
         require("cyberdream").setup({
             -- Recommended - see "Configuring" below for more config options
-            transparent = true,
             italic_comments = true,
-            hide_fillchars = true,
-            borderless_telescope = true,
         })
         vim.cmd("colorscheme cyberdream") -- set the colorscheme
     end,
@@ -87,17 +84,9 @@ Below is an example of all the available configuration options:
 
 ```lua
 require("cyberdream").setup({
-    -- Enable transparent background
-    transparent = true, -- Default: false
 
     -- Enable italics comments
     italic_comments = true, -- Default: false
-
-    -- Replace all fillchars with ' ' for the ultimate clean look
-    hide_fillchars = true, -- Default: false
-
-    -- Modern borderless telescope theme
-    borderless_telescope = true, -- Default: true
 
     theme = { -- Default: nil
         highlights = {
