@@ -213,9 +213,20 @@ function M.setup()
         LeapLabelSecondary = { fg = t.green, bg = t.bg },
         LeapBackdrop = { fg = t.bgHighlight },
 
+        -- GitSigns
+        GitSignsAdd = { fg = t.gitsigns.add    }, -- diff mode: Added line |diff.txt|
+        GitSignsChange = { fg = t.gitsigns.change }, -- diff mode: Changed line |diff.txt|
+        GitSignsDelete = { fg = t.gitsigns.delete }, -- diff mode: Deleted line |diff.txt|
+        GitSignsCurrentLineBlame = { fg = t.grey },
+
         -- Lazy
         LazyProgressDone = { bold = true, fg = t.magenta },
         LazyProgressTodo = { bold = true, fg = t.grey },
+
+        -- LspTrouble
+        TroubleText = { fg = t.fg_dark },
+        TroubleCount = { fg = t.magenta, bg = t.grey },
+        TroubleNormal = { fg = t.fg, bg = t.bg },
 
         -- Noice
         NoiceFormatProgressDone = { fg = t.bgAlt, bg = t.cyan },
@@ -224,6 +235,32 @@ function M.setup()
         NoiceLspProgressClient = { fg = t.blue },
         NoiceLspProgressSpinner = { fg = t.orange },
         NoiceLspProgressTitle = { fg = t.cyan },
+
+        -- NvimTree
+        NvimTreeRootFolder = { fg = t.cyan, bold = true },
+
+        -- NeoVim
+        healthError = { fg = t.red },
+        healthSuccess = { fg = t.green },
+        healthWarning = { fg = t.orange },
+
+        -- ts-rainbow2 (maintained fork)
+        TSRainbowRed = { fg = t.red },
+        TSRainbowOrange = { fg = t.orange },
+        TSRainbowYellow = { fg = t.yellow },
+        TSRainbowGreen = { fg = t.green },
+        TSRainbowBlue = { fg = t.blue },
+        TSRainbowViolet = { fg = t.purple },
+        TSRainbowCyan = { fg = t.cyan },
+
+        -- Indent-Blankline
+        IndentBlanklineChar = { fg = t.darkGrey1, nocombine = true },
+        IndentBlanklineContextChar = { fg = t.lblue, nocombine = true },
+        IblIndent = { fg = t.darkGrey1, nocombine = true },
+        IblScope = { fg = t.lblue, nocombine = true },
+
+        -- HarpoonWindow = { fg = t.text, bg = O.transparent_background and C.none or C.base },
+		-- HarpoonBorder = { fg = t.blue },
     }
 
     -- Override highlights with user defined highlights
