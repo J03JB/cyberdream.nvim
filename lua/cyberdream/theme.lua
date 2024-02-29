@@ -260,6 +260,11 @@ function M.setup()
         TSRainbowViolet = { fg = t.purple },
         TSRainbowCyan = { fg = t.cyan },
 
+        -- ts-context
+        TreesitterContext = { bg = t.bgAlt },
+        -- Hlargs = { fg = t.yellow },
+        -- TreesitterContext = { bg = util.darken(c.bg_visual, 0.4) },
+
         -- Indent-Blankline
         IndentBlanklineChar = { fg = t.darkGrey1, nocombine = true },
         IndentBlanklineContextChar = { fg = t.lblue, nocombine = true },
