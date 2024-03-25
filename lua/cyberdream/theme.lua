@@ -34,9 +34,9 @@ function M.setup()
         SignColumn = { fg = t.grey, bg = t.bg },
         SignColumnSB = { fg = t.grey, bg = t.bg },
         Substitute = { fg = t.red, bg = t.bgHighlight, style = "bold" },
-        LineNr = { fg = t.bgHighlight },
+        LineNr = { fg = t.bgHighlight, style = "bold" },
         CursorLineNr = { fg = t.grey },
-        MatchParen = { fg = t.pink, bg = t.fg_dark, style = "bold" },
+        MatchParen = { fg = t.pink, bg = t.darkGrey1, style = "bold" },
         ModeMsg = { fg = t.fg, style = "bold" },
         MsgArea = { fg = t.fg },
         MoreMsg = { fg = t.blue },
@@ -45,7 +45,7 @@ function M.setup()
         NormalNC = { fg = t.fg, bg = t.bg },
         NormalFloat = { fg = t.fg, bg = t.bg },
         FloatTitle = { fg = t.cyan, bg = t.none },
-        FloatBorder = { fg = t.grey, bg = t.bg },
+        FloatBorder = { fg = t.dim_green, bg = t.bg },
         Pmenu = { fg = t.fg, bg = t.bg },
         PmenuSel = { fg = t.fg, bg = t.bgHighlight },
         PmenuSbar = { fg = t.bg, bg = t.bgHighlight },
@@ -66,7 +66,8 @@ function M.setup()
         TabLineFill = { fg = t.grey, bg = t.bgHighlight },
         TabLineSel = { fg = t.fg, bg = t.bgHighlight },
         Title = { fg = t.fg },
-        Visual = { fg = t.bg, bg = t.fg_dark, style = "bold" },
+        -- may keep... i like the blue
+        Visual = { fg = t.cyan, bg = t.bgHighlight, style = "bold" },
         VisualNOS = { fg = t.bg, bg = t.bgHighlight },
         WarningMsg = { fg = t.orange },
         Whitespace = { fg = t.grey },
@@ -141,7 +142,7 @@ function M.setup()
         LspCodeLens = { fg = t.grey },
         LspInlayHint = { fg = t.grey },
 
-        LspInfoBorder = { fg = t.grey },
+        LspInfoBorder = { fg = t.dim_green },
 
         -- WhichKey
         WhichKey = { fg = t.cyan },
@@ -177,7 +178,7 @@ function M.setup()
         DashboardShortCutIcon = { fg = t.pink },
 
         -- Telescope
-        TelescopeBorder = { fg = t.bgHighlight },
+        TelescopeBorder = { fg = t.dim_green },
         TelescopePromptTitle = { fg = t.blue },
         TelescopeResultsTitle = { fg = t.cyan },
         TelescopePromptPrefix = { fg = t.pink },
@@ -186,12 +187,12 @@ function M.setup()
 
         -- Cmp
         CmpDocumentation = { fg = t.grey, bg = t.bg },
-        CmpDocumentationBorder = { fg = t.grey, bg = t.bg },
+        CmpDocumentationBorder = { fg = t.darkGrey, bg = t.bg },
         CmpGhostText = { fg = t.grey, bg = t.bg },
 
         CmpItemAbbr = { fg = t.fg, bg = t.bg },
         CmpItemAbbrDeprecated = { fg = t.grey, bg = t.bg, strikethrough = true },
-        CmpItemAbbrMatch = { fg = t.purple, bg = t.bg },
+        CmpItemAbbrMatch = { fg = t.magenta, bg = t.bg },
         CmpItemAbbrMatchFuzzy = { fg = t.purple, bg = t.bg },
 
         CmpItemKindVariable = { fg = t.cyan, bg = t.bg },
@@ -208,10 +209,10 @@ function M.setup()
         CmpItemMenu = { fg = t.fg, bg = t.none },
         CmpItemKindDefault = { fg = t.grey, bg = t.none },
 
-        CmpItemKindCodeium = { fg = t.teal, bg = t.none },
-        CmpItemKindCopilot = { fg = t.teal, bg = t.none },
-        CmpItemKindTabNine = { fg = t.teal, bg = t.none },
-        CmpItemKindCody = { fg = t.teal, bg = t.none },
+        CmpItemKindCodeium = { fg = t.lblue, bg = t.none },
+        CmpItemKindCopilot = { fg = t.lblue, bg = t.none },
+        CmpItemKindTabNine = { fg = t.lblue, bg = t.none },
+        CmpItemKindCody = { fg = t.lblue, bg = t.none },
 
 
         -- Leap
@@ -221,10 +222,10 @@ function M.setup()
         LeapBackdrop = { fg = t.bgHighlight },
 
         -- GitSigns
-        GitSignsAdd = { fg = t.gitsigns.add    }, -- diff mode: Added line |diff.txt|
-        GitSignsChange = { fg = t.gitsigns.change }, -- diff mode: Changed line |diff.txt|
-        GitSignsDelete = { fg = t.gitsigns.delete }, -- diff mode: Deleted line |diff.txt|
-        GitSignsCurrentLineBlame = { fg = t.grey },
+        GitSignsAdd = { fg = t.gitsigns.add    }, -- diff mode: Added line
+        GitSignsChange = { fg = t.gitsigns.change }, -- diff mode: Changed line
+        GitSignsDelete = { fg = t.gitsigns.delete }, -- diff mode: Deleted line
+        GitSignsCurrentLineBlame = { fg = t.bgHighlight }, -- diff mode: Current line blame
 
         -- Lazy
         LazyProgressDone = { bold = true, fg = t.magenta },
@@ -232,7 +233,7 @@ function M.setup()
 
         -- LspTrouble
         TroubleText = { fg = t.fg_dark },
-        TroubleCount = { fg = t.magenta, bg = t.grey },
+        TroubleCount = { fg = t.magenta, bg = t.bgHighlight, bold = true },
         TroubleNormal = { fg = t.fg, bg = t.bg },
 
         -- Noice

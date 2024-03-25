@@ -21,6 +21,12 @@ function M.get(group)
     end
 end
 
+-- TODO: fix these: 
+        -- 5d75359 feat(highlights)!: remove non-keyword `@type.qualifier` (7 hours ago)
+        -- dccf31f feat(highlights)!: `@keyword.storage` → `@keyword.modifier` (7 hours ago)
+        -- 998b230 feat(highlights)!: keyword `@type.qualifier` → `@keyword.modifier` (7 hours ago)
+
+
 -- taken from https://github.com/nvim-treesitter/nvim-treesitter/blob/master/lua/nvim-treesitter/highlight.lua
 M.fallbacks = {
     ["annotation"] = "TSAnnotation",
