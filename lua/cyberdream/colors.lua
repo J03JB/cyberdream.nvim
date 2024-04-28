@@ -6,6 +6,7 @@ M.default = {
     bgAlt = "#1e2124",
     bgHighlight = "#3c4048",
     fg = "#ffffff",
+    fg_d = "#E3E3E3",
     fg_dark = "#D0D0D0",
     darkGrey1 = "#303030",
     darkGrey = "#232223",
@@ -24,7 +25,7 @@ M.default = {
     purple = "#bd5eff",
     gitsigns = {
         add = "#41B235",
-        change = "#86f4ff",
+        change = "#ffbd9e",
         delete = "#ff6e5e",
     },
 }

@@ -29,14 +29,14 @@ function M.setup()
         ErrorMsg = { fg = t.red },
         VertSplit = { fg = t.bgHighlight, bg = t.bg },
         WinSeparator = { fg = t.bgHighlight, bg = t.bg },
-        Folded = { fg = t.grey, bg = t.bgHighlight },
-        FoldColumn = { fg = t.grey, bg = t.bgHighlight },
+        Folded = { fg = t.grey, bg = t.bg },
+        FoldColumn = { fg = t.grey, bg = t.bg },
         SignColumn = { fg = t.grey, bg = t.bg },
         SignColumnSB = { fg = t.grey, bg = t.bg },
         Substitute = { fg = t.red, bg = t.bgHighlight, style = "bold" },
         LineNr = { fg = t.bgHighlight, style = "bold" },
         CursorLineNr = { fg = t.grey },
-        MatchParen = { fg = t.pink, bg = t.darkGrey1, style = "bold" },
+        MatchParen = { fg = t.blue, bg = t.darkGrey1, style = "bold" },
         ModeMsg = { fg = t.fg, style = "bold" },
         MsgArea = { fg = t.fg },
         MoreMsg = { fg = t.blue },
@@ -45,13 +45,13 @@ function M.setup()
         NormalNC = { fg = t.fg, bg = t.bg },
         NormalFloat = { fg = t.fg, bg = t.bg },
         FloatTitle = { fg = t.cyan, bg = t.none },
-        FloatBorder = { fg = t.dim_green, bg = t.bg },
+        FloatBorder = { fg = t.grey, bg = t.bg },
         Pmenu = { fg = t.fg, bg = t.bg },
         PmenuSel = { fg = t.fg, bg = t.bgHighlight },
         PmenuSbar = { fg = t.bg, bg = t.bgHighlight },
         PmenuThumb = { fg = t.bg, bg = t.bgHighlight },
         Question = { fg = t.yellow },
-        QuickFixLine = { fg = t.bg, bg = t.blue },
+        QuickFixLine = { bg = t.bgHighlight },
         Search = { fg = t.bgAlt, bg = t.fg_dark},
         IncSearch = { fg = t.bgAlt, bg = t.fg_dark },
         CurSearch = { fg = t.bgAlt, bg = t.cyan },
@@ -77,10 +77,10 @@ function M.setup()
         String = { fg = t.green },
         Character = { fg = t.green },
 
-        Identifier = { fg = t.fg},
-        Function = { fg = t.blue },
-        Statement = { fg = t.magenta },
-        Operator = { fg = t.purple },
+        Identifier = { fg = t.fg_d },
+        Function = { fg = t.lblue },
+        Statement = { fg = t.pink },
+        Operator = { fg = t.magenta },
         Keyword = { fg = t.orange },
         PreProc = { fg = t.cyan },
 
@@ -145,11 +145,11 @@ function M.setup()
         LspInfoBorder = { fg = t.dim_green },
 
         -- WhichKey
-        WhichKey = { fg = t.cyan },
+        WhichKey = { fg = t.lblue },
         WhichKeyGroup = { fg = t.blue },
-        WhichKeyDesc = { fg = t.pink },
+        WhichKeyDesc = { fg = t.teal },
         WhichKeySeperator = { fg = t.darkGrey },
-        WhichKeySeparator = { fg = t.darkGrey },
+        WhichKeySeparator = { fg = t.grey },
         WhichKeyFloat = { bg = t.bg },
         WhichKeyValue = { fg = t.blue },
 
@@ -178,7 +178,7 @@ function M.setup()
         DashboardShortCutIcon = { fg = t.pink },
 
         -- Telescope
-        TelescopeBorder = { fg = t.dim_green },
+        TelescopeBorder = { fg = t.bgHighlight },
         TelescopePromptTitle = { fg = t.blue },
         TelescopeResultsTitle = { fg = t.cyan },
         TelescopePromptPrefix = { fg = t.pink },
@@ -271,6 +271,9 @@ function M.setup()
         IndentBlanklineContextChar = { fg = t.lblue, nocombine = true },
         IblIndent = { fg = t.darkGrey1, nocombine = true },
         IblScope = { fg = t.lblue, nocombine = true },
+
+        -- Treesitter specific
+        ["@variable"] = { fg = t.fg },
 
         -- HarpoonWindow = { fg = t.text, bg = O.transparent_background and C.none or C.base },
 		-- HarpoonBorder = { fg = t.blue },
