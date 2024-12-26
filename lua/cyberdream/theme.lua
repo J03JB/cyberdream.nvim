@@ -34,9 +34,9 @@ function M.setup()
         SignColumn = { fg = t.grey, bg = t.bg },
         SignColumnSB = { fg = t.grey, bg = t.bg },
         Substitute = { fg = t.red, bg = t.bgHighlight, style = "bold" },
-        LineNr = { fg = t.bgHighlight, style = "bold" },
-        CursorLineNr = { fg = t.grey },
-        MatchParen = { fg = t.blue, bg = t.darkGrey1, style = "bold" },
+        LineNr = { fg = t.grey, style = "bold" },
+        CursorLineNr = { fg = t.lblue },
+        MatchParen = { fg = t.bg, bg = t.pink, style = "bold" },
         ModeMsg = { fg = t.fg, style = "bold" },
         MsgArea = { fg = t.fg },
         MoreMsg = { fg = t.blue },
@@ -52,9 +52,9 @@ function M.setup()
         PmenuThumb = { fg = t.bg, bg = t.bgHighlight },
         Question = { fg = t.yellow },
         QuickFixLine = { bg = t.bgHighlight },
-        Search = { fg = t.bgAlt, bg = t.fg_dark},
-        IncSearch = { fg = t.bgAlt, bg = t.fg_dark },
-        CurSearch = { fg = t.bgAlt, bg = t.cyan },
+        Search = { fg = t.bgAlt, bg = t.fg_dark, style = "bold" },
+        IncSearch = { fg = t.bgAlt, bg = t.fg_dark, style = "bold" },
+        CurSearch = { fg = t.bgAlt, bg = t.cyan, style = "bold" },
         SpecialKey = { fg = t.grey },
         SpellBad = { fg = t.red, style = "undercurl" },
         SpellCap = { fg = t.yellow, style = "undercurl" },
@@ -65,8 +65,7 @@ function M.setup()
         TabLine = { fg = t.grey, bg = t.bgHighlight },
         TabLineFill = { fg = t.grey, bg = t.bgHighlight },
         TabLineSel = { fg = t.fg, bg = t.bgHighlight },
-        Title = { fg = t.fg },
-        -- may keep... i like the blue
+        Title = { fg = t.lblue, style = "bold" },
         Visual = { fg = t.cyan, bg = t.bgHighlight, style = "bold" },
         VisualNOS = { fg = t.bg, bg = t.bgHighlight },
         WarningMsg = { fg = t.orange },
@@ -117,9 +116,9 @@ function M.setup()
         markdownH5 = { fg = t.magenta, bold = true },
         markdownLinkText = { fg = t.blue, underline = true },
 
-        LspReferenceText = { bg = t.bgHighlight },
-        LspReferenceRead = { bg = t.bgHighlight },
-        LspReferenceWrite = { bg = t.bgHighlight },
+        LspReferenceText = { fg = t.purple, style = "bold" },
+        LspReferenceRead = { fg = t.purple, style = "bold" },
+        LspReferenceWrite = { fg = t.purple, style = "bold" },
 
         -- LspDiagnostics
         DiagnosticError = { fg = t.red },
@@ -145,13 +144,13 @@ function M.setup()
         LspInfoBorder = { fg = t.dim_green },
 
         -- WhichKey
-        WhichKey = { fg = t.lblue },
-        WhichKeyGroup = { fg = t.blue },
+        WhichKey = { fg = t.purple},
+        WhichKeyGroup = { fg = t.lblue },
         WhichKeyDesc = { fg = t.teal },
         WhichKeySeperator = { fg = t.darkGrey },
         WhichKeySeparator = { fg = t.grey },
         WhichKeyFloat = { bg = t.bg },
-        WhichKeyValue = { fg = t.blue },
+        WhichKeyValue = { fg = t.lblue },
 
         -- Alpha
         AlphaShortcut = { fg = t.orange },
@@ -276,7 +275,27 @@ function M.setup()
         ["@variable"] = { fg = t.fg },
 
         -- HarpoonWindow = { fg = t.text, bg = O.transparent_background and C.none or C.base },
-		-- HarpoonBorder = { fg = t.blue },
+		HarpoonBorder = { fg = t.blue },
+
+
+        -- TODO: finish these, maybe add rest from cmp to main repo...
+
+        -- Blink.cmp
+        BlinkCmpMenu = { fg = t.fg_dark, bg = t.bgAlt },
+        -- BlinkCmpMenuBorder	Pmenu	The completion menu window border
+        BlinkCmpMenuSelection = { fg = t.cyan, bg = t.none, style = "bold" },
+        -- BlinkCmpLabel	Pmenu	Label of the completion item
+        -- BlinkCmpLabelDeprecated	Comment	Deprecated label of the completion item
+        -- BlinkCmpLabelMatch	Pmenu	(Currently unused) Label of the completion item when it matches the query
+        -- BlinkCmpKind	Special	Kind icon/text of the completion item
+        BlinkCmpKind = { fg = t.purple, style = "bold"},
+        BlinkCmpDoc	= { fg = t.grey, bg = t.bgAlt },
+        BlinkCmpDocBorder = { fg = t.darkGrey, bg = t.bgAlt },
+        -- BlinkCmpDocCursorLine	Visual	The documentation window cursor line
+        -- BlinkCmpSignatureHelp	NormalFloat	The signature help window
+        -- BlinkCmpSignatureHelpBorder	FloatBorder	The signature help window border
+        -- BlinkCmpSignatureHelpActiveParameter	LspSignatureActiveParameter	Active parameter of the signature help
+        BlinkCmpGhostText = { fg = t.bgHighlight, bg = t.none, style = "bold" }
     }
 
     -- Override highlights with user defined highlights

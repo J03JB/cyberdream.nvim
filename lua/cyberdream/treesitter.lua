@@ -411,11 +411,15 @@ M.defaults = {
     },
     ["@type.qualifier"] = {
         default = true,
-        link = "@keyword",
+        link = "@keyword.modifier",
     },
     ["@variable.builtin"] = {
         default = true,
         link = "Special",
+    },
+    ["@module.builtin"] = {
+        default = true,
+        link = "@module.builtin"
     },
 }
 
