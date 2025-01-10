@@ -7,22 +7,23 @@ local util = require("cyberdream.util")
 function M.get(opts, t)
     opts = opts or {}
     local highlights = {
-        BlinkCmpMenu = { link = "Pmenu" },
+        BlinkCmpMenu = { bg = t.bgAlt },
         BlinkCmpMenuBorder = { fg = util.blend(t.bgHighlight, t.grey, 0.7) },
-        BlinkCmpMenuSelection = { bg = t.bgHighlight },
+        BlinkCmpMenuSelection = { fg = t.cyan, bg = t.bgHighlight },
         BlinkCmpLabel = { fg = t.fg },
         BlinkCmpLabelDeprecated = { fg = t.grey, strikethrough = true },
-        BlinkCmpLabelMatch = { fg = t.cyan },
+        BlinkCmpLabelMatch = { fg = t.lblue },
         BlinkCmpDoc = { link = "NormalFloat" },
         BlinkCmpDocBorder = { link = "BlinkCmpMenuBorder" },
         BlinkCmpDocCursorLine = { link = "Visual" },
         BlinkCmpSignatureHelp = { link = "NormalFloat" },
         BlinkCmpSignatureHelpBorder = { link = "BlinkCmpMenuBorder" },
         BlinkCmpSignatureHelpActiveParameter = { fg = t.cyan },
+        BlinkCmpGhostText = { fg = t.bgHighlight, bg = t.none, bold = true },
 
         -- Kinds
         BlinkCmpKindText = { fg = t.green },
-        BlinkCmpKindMethod = { fg = t.blue },
+        BlinkCmpKindMethod = { fg = t.lblue },
         BlinkCmpKindFunction = { fg = t.blue },
         BlinkCmpKindConstructor = { fg = t.purple },
 
