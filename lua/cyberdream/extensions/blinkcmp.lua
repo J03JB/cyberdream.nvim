@@ -20,6 +20,7 @@ function M.get(opts, t)
         BlinkCmpSignatureHelpBorder = { link = "BlinkCmpMenuBorder" },
         BlinkCmpSignatureHelpActiveParameter = { fg = t.cyan },
         BlinkCmpGhostText = { fg = t.bgHighlight, bg = t.none, bold = true },
+        BlinkCmpSource = { fg = util.blend( t.fg, t.darkGrey1, 0.3) },
 
         -- Kinds
         BlinkCmpKindText = { fg = t.green },
