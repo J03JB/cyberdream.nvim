@@ -1,0 +1,4 @@
+local highlights = {
+}
+
+return highlights

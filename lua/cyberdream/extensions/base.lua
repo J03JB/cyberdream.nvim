@@ -79,7 +79,7 @@ function M.get(opts, t)
         Number = { fg = t.orange },
 
         Identifier = { fg = t.fg },
-        Function = { fg = t.lblue },
+        Function = { fg = t.blue },
         Statement = { fg = t.magenta },
         Operator = { fg = t.purple },
         Keyword = { fg = t.orange },
