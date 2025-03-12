@@ -14,7 +14,7 @@ function M.get(opts, t)
         BlinkCmpLabelDeprecated = { fg = t.grey, strikethrough = true },
         BlinkCmpLabelMatch = { fg = t.lblue },
         BlinkCmpDoc = { link = "NormalFloat" },
-        BlinkCmpDocBorder = { link = "BlinkCmpMenuBorder" },
+        BlinkCmpDocBorder = { fg = t.grey, bg = t.bgAlt },
         BlinkCmpDocCursorLine = { link = "Visual" },
         BlinkCmpSignatureHelp = { link = "NormalFloat" },
         BlinkCmpSignatureHelpBorder = { link = "BlinkCmpMenuBorder" },

@@ -41,7 +41,7 @@ function M.get(opts, t)
         NonText = { fg = t.darkGrey1 },
         Normal = { fg = t.fg, bg = t.bg },
         NormalNC = { fg = t.fg, bg = t.bg },
-        NormalFloat = { fg = t.fg, bg = t.bg },
+        NormalFloat = { fg = t.fg, bg = t.bgAlt },
         FloatTitle = { fg = t.cyan, bg = t.bg },
         FloatBorder = { fg = t.grey, bg = t.bg },
         Pmenu = { fg = t.fg, bg = t.bg },
